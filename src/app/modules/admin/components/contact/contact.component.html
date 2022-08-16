@@ -1,0 +1,87 @@
+<div class="container">
+  <form [formGroup]="contactForm" (ngSubmit)="contactSubmit()">
+    <h1 class="display-4">Contact Us</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="first">First Name</label>
+          <input type="text" formControlName="firstName" class="form-control" placeholder="" id="first">
+        </div>
+      </div>
+      <!--  col-md-6   -->
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="last">Last Name</label>
+          <input type="text" formControlName="lastName" class="form-control" class="form-control" placeholder="" id="last">
+        </div>
+      </div>
+      <!--  col-md-6   -->
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="company">Company</label>
+          <input type="text" formControlName="company" class="form-control" class="form-control" placeholder="" id="company">
+        </div>
+
+
+      </div>
+      <!--  col-md-6   -->
+
+      <div class="col-md-6">
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" formControlName="phone" class="form-control" class="form-control" id="phone" placeholder="phone">
+        </div>
+      </div>
+      <!--  col-md-6   -->
+    </div>
+    <!--  row   -->
+      <div>{{hacon}}</div>
+
+    <div class="row">
+      <div class="col-md-6">
+
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" formControlName="email" class="form-control" class="form-control" id="email" placeholder="email">
+        </div>
+      </div>
+      <!--  col-md-6   -->
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="url">Your Website <small>Please include http://</small></label>
+          <input type="url" formControlName="url" class="form-control" class="form-control" id="url" placeholder="url">
+        </div>
+
+      </div>
+      <!--  col-md-6   -->
+    </div>
+    <!--  row   -->
+
+    <div class="row" formGroupName="preferredContactTime">
+    <label for="contact-preference">When is the best time of day to reach you?</label>
+
+    <select class="form-select" formControlName="selectTime" aria-label="Default select example">
+      <option value="-1" >Select Time</option>
+      <option value="morning">Morning</option>
+      <option value="evening">Evening</option>
+    </select>
+  </div>
+    <label for="newsletter">Would you like to recieve our email newsletter?</label>
+    <div class="checkbox">
+
+      <label>
+        <input type="checkbox" value="Sure!" id="newsletter"> Sure!
+      </label>
+    </div>
+
+
+    <button type="submit"  class="btn btn-primary">Submit</button>
+  </form>
+</div>
