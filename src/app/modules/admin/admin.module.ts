@@ -10,6 +10,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NewsComponent } from './components/news/news.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ErrorrealDirective } from './components/shared/errorreal.directive';
 
 
 @NgModule({
@@ -25,7 +26,10 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     AdminRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
   ]
 })
-export class AdminModule { }
+export class AdminModule {
+
+ }

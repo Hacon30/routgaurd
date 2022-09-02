@@ -26,5 +26,5 @@ export class AuthService {
       return of({name: "Hassan", email: "hacondesign@gmail.com"})
     }
     return throwError(()=>new Error('Yo shit aint right'));
-  }
+  };
 }

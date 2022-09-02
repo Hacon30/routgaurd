@@ -6,6 +6,9 @@
         <div class="form-group">
           <label for="first">First Name</label>
           <input type="text" formControlName="firstName" class="form-control" placeholder="" id="first">
+          <div class="alert-danger alert" *ngIf="firstName?.invalid && (firstName?.touched || firstName?.dirty)">
+            <div *ngIf="firstName?.errors?.['required']">This field is required!</div>
+            </div>
         </div>
       </div>
       <!--  col-md-6   -->
@@ -68,12 +71,15 @@
       <div class="col col-md-4">
     <label for="contact-preference" class="my-2">When is the best time of day to reach you?</label>
 
-    <select class="form-select" formControlName="selectTime" aria-label="Default select example">
-      <option value="-1" >Select Time</option>
-      <option value="morning">Morning</option>
+    <select class="form-select" formControlName="selectTime" id="contact-preference" aria-label="Default select example">
+      <option value="-2" >Select Time</option>
+      <option value="0">Morning</option>
       <option value="evening">Evening</option>
-    </select>
+    </select>  <div class="alert-danger alert" *ngIf="selectTime?.invalid && (selectTime?.touched || selectTime?.dirty)">
+    <div *ngIf="selectTime?.errors?.['morningOrEveningRequired']">Please select Time</div>
+    </div>
   </div>
+
   </div>
 
   <div class="row mb-4" formArrayName="skills">
@@ -92,6 +98,9 @@
         [id]="'programLang'+i"
         placeholder="Programming Language">
       </div>
+      <div class="alert-danger alert" *ngIf="getProgramming(i)?.invalid && (getProgramming(i)?.touched || getProgramming(i)?.dirty)">
+        <div *ngIf="getProgramming(i)?.errors?.['required']">This field is required!</div>
+        </div>
       <div class="col co-md-5">
         <input
         type="url"
