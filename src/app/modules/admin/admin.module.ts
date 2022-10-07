@@ -11,6 +11,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { NewsComponent } from './components/news/news.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ErrorrealDirective } from './components/shared/errorreal.directive';
+import { TableDataComponent } from './components/table-data/table-data.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ErrorrealDirective } from './components/shared/errorreal.directive';
     FooterComponent,
     AboutComponent,
     ContactComponent,
-    NewsComponent
+    NewsComponent,
+    TableDataComponent
   ],
   imports: [
     CommonModule,

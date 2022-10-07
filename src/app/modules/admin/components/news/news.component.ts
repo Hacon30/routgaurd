@@ -15,7 +15,6 @@ export class NewsComponent implements OnInit {
   ngOnInit(): void {
     this.apiService.getFeed().subscribe(data =>{
       console.log(data);
-
       this.articlesFeed =  data;
       this.iterableFeed = this.articlesFeed.articles
     })
