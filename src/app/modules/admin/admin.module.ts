@@ -12,8 +12,8 @@ import { NewsComponent } from './components/news/news.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ErrorrealDirective } from './components/shared/errorreal.directive';
 import { TableDataComponent } from './components/table-data/table-data.component';
-
-
+import { MatTableModule}  from '@angular/material/table'
+import { MatSortModule } from '@angular/material/sort';
 @NgModule({
   declarations: [
     AdminDashboardComponent,
@@ -23,13 +23,15 @@ import { TableDataComponent } from './components/table-data/table-data.component
     AboutComponent,
     ContactComponent,
     NewsComponent,
-    TableDataComponent
+    TableDataComponent,
+
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
     ReactiveFormsModule,
-
+    MatTableModule,
+    MatSortModule
   ]
 })
 export class AdminModule {
