@@ -1,0 +1,11 @@
+<div class="container">
+  <h1 class="display-4 my-4">Calculator</h1>
+<div class="card p-3 my-3 flex-row" *ngFor="let item of values"  >
+<div class="col-3"><input type="number" value="{{item.valueOne}}"></div>
+
+<div class="col-3"><input type="number" value="{{item.valueTwo}}"></div>
+
+  </div>
+  <button class="btn btn-primary" (click)="operMulti">Multiply</button>
+  <div class="display-4 my-4">{{display}}</div>
+</div>

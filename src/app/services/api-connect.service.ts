@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 export class ApiConnectService {
  public url = 'https://newsapi.org/v2/everything?' +
           'q=Apple&' +
-          'from=2022-10-07&' +
+          'from=2023-03-07&' +
           'sortBy=popularity&' +
           'apiKey=49a15aaf63d043b691fbac6e5b9592fc';
   API_KEY = '49a15aaf63d043b691fbac6e5b9592fc';

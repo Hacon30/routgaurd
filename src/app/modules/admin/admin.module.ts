@@ -14,6 +14,7 @@ import { ErrorrealDirective } from './components/shared/errorreal.directive';
 import { TableDataComponent } from './components/table-data/table-data.component';
 import { MatTableModule}  from '@angular/material/table'
 import { MatSortModule } from '@angular/material/sort';
+import { CalculatorComponent } from './components/calculator/calculator.component';
 @NgModule({
   declarations: [
     AdminDashboardComponent,
@@ -24,6 +25,7 @@ import { MatSortModule } from '@angular/material/sort';
     ContactComponent,
     NewsComponent,
     TableDataComponent,
+    CalculatorComponent,
 
   ],
   imports: [
